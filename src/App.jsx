@@ -150,7 +150,7 @@ export default function App() {
                   width: "75%",
                   maxWidth: "500px",
                   height: "auto",
-                  marginBottom: "2rem",
+                  marginBottom: "1rem",
                 }}
               />
               {/* 타이틀 */}
