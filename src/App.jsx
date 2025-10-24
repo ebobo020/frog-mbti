@@ -139,13 +139,13 @@ export default function App() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full max-w-2xl mx-auto px-4 py-12 text-center"
+            className="min-h-screen flex flex-col items-center justify-center px-6 py-10 text-center"
           >
-            <div ref={cardRef} className="flex flex-col items-center text-center">
+            <div ref={cardRef} className="flex flex-col items-center justify-center text-center w-full max-w-lg mx-auto">
               <img
                 src={result.image}
                 alt={result.name}
-                className="rounded-2xl shadow-md object-contain"
+                className="rounded-2xl shadow-md object-contain mb-8 mx-auto"
                 style={{
                   width: "75%",
                   maxWidth: "500px",
@@ -153,9 +153,12 @@ export default function App() {
                   marginBottom: "2rem",
                 }}
               />
-              <h2 className="text-xl font-extrabold mb-3 text-emerald-800">{result.name}</h2>
-              <p className="text-xl italic text-gray-600 mb-10 leading-relaxed text-center ph-9">"{result.desc}"</p>
-              <ul className="text-lg text-gray-700 space-y-6 leading-[1.8] text-center list-none mx-auto w-full flex flex-col items-center justify-center">
+              {/* 타이틀 */}
+              <h2 className="text-2xl font-extrabold text-emerald-800 mb-3">{result.name}</h2>
+              {/* 한 줄 설명 */}
+              <p className="text-lg italic text-gray-600 mb-10 leading-relaxed max-w-[90%] mx-auto">"{result.desc}"</p>
+              {/* 특징 리스트 */}
+              <ul className="flex flex-col items-center justify-center text-center space-y-5 text-gray-800 leading-relaxed w-full px-2">
                 {result.traits.map((t, i) => (
                   <li key={i} className="text-center">
                     <span className="text-emerald-500"></span>
