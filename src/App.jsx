@@ -160,7 +160,7 @@ export default function App() {
               {/* 특징 리스트 */}
               <ul className="flex flex-col items-center justify-center text-center space-y-5 text-gray-800 leading-relaxed w-full px-2">
                 {result.traits.map((t, i) => (
-                  <li key={i} className="text-center">
+                  <li key={i} className="max-w-[90%] text-base break-keep">
                     <span className="text-emerald-500"></span>
                     <span>{t}</span>
                   </li>
