@@ -139,13 +139,13 @@ export default function App() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full max-w-3xl bg-white/90 p-10 rounded-3xl shadow-lg text-center mx-auto"
+            className="w-full max-w-2xl mx-auto px-4 py-12 text-center"
           >
-            <div ref={cardRef}>
+            <div ref={cardRef} className="flex flex-col items-center text-center">
               <img
                 src={result.image}
                 alt={result.name}
-                className="mx-auto mb-6 rounded-2xl shadow-md object-contain w-[85%] max-w-[300px]"
+                className="rounded-2xl shadow-md object-contain"
                 style={{
                   width: "75%",
                   maxWidth: "500px",
@@ -155,7 +155,7 @@ export default function App() {
               />
               <h2 className="text-xl font-extrabold mb-3 text-emerald-800">{result.name}</h2>
               <p className="text-xl italic text-gray-600 mb-10 leading-relaxed text-center ph-9">"{result.desc}"</p>
-              <ul className="mt-8 text-lg leading-[1.8] grid gap-3 justify-items-center text-center list-none">
+              <ul className="text-lg text-gray-700 space-y-6 leading-[1.8] text-center list-none mx-auto w-full flex flex-col items-center justify-center">
                 {result.traits.map((t, i) => (
                   <li key={i} className="text-center">
                     <span className="text-emerald-500"></span>
